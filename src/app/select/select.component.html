@@ -1,0 +1,25 @@
+
+
+<div class="container">
+  <table class="table table-bordered">
+    <thead>
+      <th>ID</th>
+      <th>Name</th>
+      <th>Rating</th>
+      <th>Description</th>
+      <th>Image</th>
+      <th colspan="2">Actions</th>
+      
+    </thead>
+    <tr *ngFor="let m of movies">
+      <td>{{m.movieId}}</td>
+      <td>{{m.name}}</td>
+      <td>{{m.rating}}</td>
+      <td>{{m.description}}</td>
+      <td><img style="height: 100px;width: 80px;" src="http://localhost:4000/{{m.image}}" alt=""></td>
+      <td><button class="btn btn-danger" (click)="deleteMovie(m.movieId)"> Delete</button></td>
+      <td><button class="btn btn-success" (click)="updateMovie(m.movieId)"> Update</button></td>
+
+    </tr>
+  </table>
+</div>
