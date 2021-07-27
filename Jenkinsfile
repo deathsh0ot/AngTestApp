@@ -20,12 +20,6 @@ node {
                 sh 'ng build --prod' 
     
         }
-         stage('Moving') {
-        
-                echo 'MovingFiles...'
-                sh 'sudo mv dist/Test/* /var/www/html' 
-            
-        }
         stage('SonarQube analysis') {
              
             def scannerHome = tool 'sonar_scanner';
