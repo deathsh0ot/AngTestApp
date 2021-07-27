@@ -32,7 +32,7 @@ node {
         sh ' docker build -t angapp ${WORKSPACE}/ '
       }
   stage("run") {
-        sh 'docker run --rm -p 4200:4000 angapp'
+        sh 'docker run --rm -p 4201:4200 angapp'
         
       }
     
