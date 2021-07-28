@@ -32,7 +32,8 @@ node {
         sh ' docker build -t angapp ${WORKSPACE}/ '
       }
   stage("run") {
-        sh 'docker run --rm -p 4201:4200 angapp'
+        sh 'docker rm -f Frontend || true'
+        sh 'docker run -d --name frontEnd -p 4201:4200 angapp'
         
       }
     
