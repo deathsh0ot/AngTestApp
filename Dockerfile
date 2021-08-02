@@ -1,7 +1,7 @@
 #Building the app
 FROM node:latest as node
 WORKDIR /app
-COPY /dist/Angapp .
+COPY dist/Angapp .
 RUN npm install
 RUN npm run build --prod
 
