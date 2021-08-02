@@ -1,8 +1,8 @@
 #Building the app
 FROM node:latest as node
 WORKDIR /app
-COPY dist/Angapp .
-
+COPY . .
+RUN npm install
 RUN npm run build --prod
 
 EXPOSE 4200
